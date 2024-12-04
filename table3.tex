@@ -1,0 +1,52 @@
+\begin{table*}[!h]
+\centering
+\small
+\setlength{\aboverulesep}{0pt}
+\setlength{\belowrulesep}{0pt}
+\setlength{\extrarowheight}{0.3pt} % 调整行高
+\resizebox{\textwidth}{!}{
+\begin{tabular}{c|cr|ccccccccc}
+\toprule
+\multirow{2.5}{*}{Models} & \multirow{2.5}{*}{$\#\mathcal{Y}_f$} & \multirow{2.5}{*}{Metrics} & \multicolumn{9}{c}{\textbf{CIFAR-20}} \\
+\cmidrule(lr){4-12}
+ & & & Original & CRetrain & Finetune & NegGrad & RL & MI & GKT & UNSIR & \textbf{Ours} \\
+\midrule
+\multirow{12}{*}{\rotatebox{90}{\textbf{AllCNN}}}
+ & \multirow{3}{*}{1} & $A\mathcal{D}_r(\%)\uparrow$ & 59.17 & 60.65 & 59.76 & 15.63 & 54.12 & 55.12 & 48.23 & 49.83 & \underline{\textbf{58.34}} \\
+ & & $A\mathcal{D}_f(\%)\downarrow$ & 63.12 & 0.00 & 21.89 & 0.76 & 13.47 & 0.95 & 0.00 & 0.00 & \textbf{0.00} \\
+ & & $\ \ \ \ RT\ \ \ \ \ \uparrow$ & -- & \(>100\) & 17 & 24 & \(>100\) & \(>100\) & \(>100\) & \(>100\) & \(>100\) \\
+\cmidrule(lr){2-12}
+ & \multirow{3}{*}{2} & $A\mathcal{D}_r(\%)\uparrow$ & 58.75 & 59.90 & 59.33 & 22.43 & 55.12 & 54.04 & 46.54 & 47.13 & \underline{\textbf{58.23}} \\
+ & & $A\mathcal{D}_f(\%)\downarrow$ & 65.42 & 0.00 & 41.30 & 1.26 & 15.29 & 1.03 & 0.00 & 0.00 & \textbf{0.00} \\
+ & & $\ \ \ \ RT\ \ \ \ \ \uparrow$ & -- & \(>100\) & 19 & 39 & \(>100\) & \(>100\) & \(>100\) & \(>100\) & \(>100\) \\
+\cmidrule(lr){2-12}
+ & \multirow{3}{*}{4} & $A\mathcal{D}_r(\%)\uparrow$ & 58.35 & 60.75 & 59.03 & 11.75 & 54.54 & 53.23 & 49.12 & 50.20 & \underline{\textbf{59.87}} \\
+ & & $A\mathcal{D}_f(\%)\downarrow$ & 63.60 & 0.00 & 42.19 & 0.98 & 13.83 & 1.87 & 0.00 & 0.00 & \textbf{0.00} \\
+ & & $\ \ \ \ RT\ \ \ \ \ \uparrow$ & -- & \(>100\) & 14 & 55 & \(>100\) & \(>100\) & \(>100\) & \(>100\) & \(>100\) \\
+\cmidrule(lr){2-12}
+ & \multirow{3}{*}{7} & $A\mathcal{D}_r(\%)\uparrow$ & 56.93 & 59.98 & 57.38 & 16.52 & 53.63 & 52.47 & 45.01 & 46.21 & \underline{\textbf{55.45}} \\
+ & & $A\mathcal{D}_f(\%)\downarrow$ & 64.07 & 0.00 & 52.32 & 1.09 & 14.52 & 2.17 & 0.00 & 0.00 & \textbf{0.00} \\
+ & & $\ \ \ \ RT\ \ \ \ \ \uparrow$ & -- & \(>100\) & 30 & 41 & \(>100\) & \(>100\) & \(>100\) & \(>100\) & \(>100\) \\
+\midrule
+\multirow{12}{*}{\rotatebox{90}{\textbf{ResNet18}}}
+ & \multirow{3}{*}{1} & $A\mathcal{D}_r(\%)\uparrow$ & 63.49 & 63.77 & 62.85 & 16.85 & 59.12 & 58.87 & 53.45 & 54.02 & \underline{\textbf{63.45}} \\
+ & & $A\mathcal{D_f}(\%)\downarrow$ & 60.42 & 0.00 & 45.29 & 1.76 & 14.88 & 1.35 & 0.00 & 0.00 & \textbf{0.00} \\
+ & & $\ \ \ \ RT\ \ \ \ \ \uparrow$ & -- & \(>100\) & 25 & 44 & \(>100\) & \(>100\) & \(>100\) & \(>100\) & \(>100\) \\
+\cmidrule(lr){2-12}
+ & \multirow{3}{*}{2} & $A\mathcal{D}_r(\%)\uparrow$ & 63.49 & 65.60 & 64.11 & 14.67 & 59.14 & 58.25 & 50.21 & 51.73 & \underline{\textbf{64.23}} \\
+ & & $A\mathcal{D_f}(\%)\downarrow$ & 62.60 & 0.00 & 52.11 & 0.55 & 13.25 & 1.43 & 0.00 & 0.00 & \textbf{0.00} \\
+ & & $\ \ \ \ RT\ \ \ \ \ \uparrow$ & -- & \(>100\) & 11 & 92 & \(>100\) & \(>100\) & \(>100\) & \(>100\) & \(>100\) \\
+\cmidrule(lr){2-12}
+ & \multirow{3}{*}{4} & $A\mathcal{D}_r(\%)\uparrow$ & 61.88 & 62.54 & 60.91 & 18.45 & 57.23 & 56.76 & 47.34 & 48.95 & \underline{\textbf{60.12}} \\
+ & & $A\mathcal{D_f}(\%)\downarrow$ & 69.56 & 0.00 & 36.14 & 1.87 & 15.12 & 2.34 & 0.00 & 0.00 & \textbf{0.00} \\
+ & & $\ \ \ \ RT\ \ \ \ \ \uparrow$ & -- & \(>100\) & 10 & 37 & \(>100\) & \(>100\) & \(>100\) & \(>100\) & \(>100\) \\
+\cmidrule(lr){2-12}
+ & \multirow{3}{*}{7} & $A\mathcal{D}_r(\%)\uparrow$ & 60.70 & 64.21 & 60.39 & 23.88 & 56.13 & 55.05 & 48.12 & 49.80 & \underline{\textbf{61.54}} \\
+ & & $A\mathcal{D_f}(\%)\downarrow$ & 68.29 & 0.00 & 57.38 & 0.99 & 13.78 & 1.78 & 0.00 & 0.00 & \textbf{0.00} \\
+ & & $\ \ \ \ RT\ \ \ \ \ \uparrow$ & -- & \(>100\) & 19 & 83 & \(>100\) & \(>100\) & \(>100\) & \(>100\) & \(>100\) \\
+\bottomrule
+\end{tabular}
+}
+\caption{Rusults of $A\mathcal{D}_r$, $A\mathcal{D}_f$, and $RT$ across different $\#\mathcal{Y}_f$ values using AllCNN and ResNet18 predictive models on CIFAR-20 datasets. The upward arrow ($\uparrow$) indicates that higher values are better, while the downward arrow ($\downarrow$) indicates that lower values are better. Underlined Values denote results within 5\% of the original predictive model's performance, and Bolded Values indicate that our framework's results differ from the CRetrain by less than 5\%.}
+\label{table_cifar20}
+\end{table*}

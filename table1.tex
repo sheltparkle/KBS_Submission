@@ -1,0 +1,105 @@
+% \begin{table*}[t]
+% \centering
+% \small
+% \setlength{\aboverulesep}{0pt}
+% \setlength{\belowrulesep}{0pt}
+% \setlength{\extrarowheight}{0.3pt} % 调整行高
+% \begin{tabular}{c|cr|ccccccccc}
+% \toprule
+% \multirow{2.5}{*}{Models} & \multirow{2.5}{*}{$\#\mathcal{Y}_f$} & \multirow{2.5}{*}{Metrics} & \multicolumn{9}{c}{\textbf{Fashion MNIST}} \\
+% \cmidrule(lr){4-12}
+%  & & & Original & CRetrain & Finetune & NegGrad & RL & MI & GKT & UNSIR & \textbf{Ours} \\
+% \midrule
+
+% \multirow{12}{*}{\rotatebox{90}{\textbf{AllCNN}}}
+%  & \multirow{3}{*}{1} & $A\mathcal{D}_r(\%)\uparrow$ & 90.12 & 92.36 & 90.72 & 46.58 & 85.12 & 86.13 & 81.23 & 82.50 & \underline{\textbf{88.74}} \\
+%  & & $A\mathcal{D}_f(\%)\downarrow$ & 88.56 & 0.00 & 34.56 & 1.12 & 12.34 & 0.67 & 0.00 & 0.00 & \textbf{0.00} \\
+%  & & $\ \ \ \ RT\ \ \ \ \ \uparrow$ & -- & \(>100\) & 27 & 45 & \(>100\) & \(>100\) & \(>100\) & \(>100\) & \(>100\) \\
+% \cmidrule(lr){2-12}
+%  & \multirow{3}{*}{2} & $A\mathcal{D}_r(\%)\uparrow$ & 89.47 & 93.12 & 90.14 & 50.17 & 84.47 & 85.13 & 77.54 & 78.90 & \underline{\textbf{88.65}} \\
+%  & & $A\mathcal{D}_f(\%)\downarrow$ & 90.14 & 0.00 & 37.56 & 1.55 & 13.28 & 1.43 & 0.00 & 0.00 & \textbf{0.00} \\
+%  & & $\ \ \ \ RT\ \ \ \ \ \uparrow$ & -- & \(>100\) & 16 & 76 & \(>100\) & \(>100\) & \(>100\) & \(>100\) & \(>100\) \\
+% \cmidrule(lr){2-12}
+%  & \multirow{3}{*}{4} & $A\mathcal{D}_r(\%)\uparrow$ & 88.75 & 93.20 & 88.96 & 40.27 & 83.75 & 84.21 & 74.32 & 75.90 & \underline{\textbf{90.45}} \\
+%  & & $A\mathcal{D}_f(\%)\downarrow$ & 91.32 & 0.00 & 40.94 & 1.89 & 14.05 & 0.82 & 0.00 & 0.00 & \textbf{0.00} \\
+%  & & $\ \ \ \ RT\ \ \ \ \ \uparrow$ & -- & \(>100\) & 21 & 33 & \(>100\) & \(>100\) & \(>100\) & \(>100\) & \(>100\) \\
+% \cmidrule(lr){2-12}
+%  & \multirow{3}{*}{7} & $A\mathcal{D}_r(\%)\uparrow$ & 92.14 & 95.41 & 92.41 & 50.34 & 87.34 & 88.65 & 83.12 & 84.65 & \underline{\textbf{93.12}} \\
+%  & & $A\mathcal{D}_f(\%)\downarrow$ & 89.01 & 0.00 & 33.23 & 1.62 & 13.56 & 2.34 & 0.00 & 0.00 & \textbf{0.00} \\
+%  & & $\ \ \ \ RT\ \ \ \ \ \uparrow$ & -- & \(>100\) & 23 & 48 & \(>100\) & \(>100\) & \(>100\) & \(>100\) & \(>100\) \\
+% \midrule
+% \multirow{12}{*}{\rotatebox{90}{\textbf{ResNet18}}}
+%  & \multirow{3}{*}{1} & $A\mathcal{D}_r(\%)\uparrow$ & 91.23 & 93.41 & 91.76 & 54.82 & 86.23 & 87.14 & 82.67 & 83.10 & \underline{\textbf{90.34}} \\
+%  & & $A\mathcal{D}_f(\%)\downarrow$ & 87.45 & 0.00 & 41.38 & 0.91 & 14.12 & 1.24 & 0.00 & 0.00 & \textbf{0.00} \\
+%  & & $\ \ \ \ RT\ \ \ \ \ \uparrow$ & -- & \(>100\) & 18 & 72 & \(>100\) & \(>100\) & \(>100\) & \(>100\) & \(>100\) \\
+% \cmidrule(lr){2-12}
+%  & \multirow{3}{*}{2} & $A\mathcal{D}_r(\%)\uparrow$ & 89.87 & 94.85 & 89.05 & 40.98 & 85.12 & 86.13 & 75.54 & 77.32 & \underline{\textbf{90.23}} \\
+%  & & $A\mathcal{D}_f(\%)\downarrow$ & 88.56 & 0.00 & 47.79 & 1.36 & 13.95 & 0.95 & 0.00 & 0.00 & \textbf{0.00} \\
+%  & & $\ \ \ \ RT\ \ \ \ \ \uparrow$ & -- & \(>100\) & 27 & 66 & \(>100\) & \(>100\) & \(>100\) & \(>100\) & \(>100\) \\
+% \cmidrule(lr){2-12}
+%  & \multirow{3}{*}{4} & $A\mathcal{D}_r(\%)\uparrow$ & 90.54 & 92.76 & 90.79 & 30.34 & 86.12 & 85.23 & 80.54 & 81.30 & \underline{\textbf{91.45}} \\
+%  & & $A\mathcal{D}_f(\%)\downarrow$ & 87.65 & 0.00 & 37.92 & 1.43 & 12.78 & 1.67 & 0.00 & 0.00 & \textbf{0.00} \\
+%  & & $\ \ \ \ RT\ \ \ \ \ \uparrow$ & -- & \(>100\) & 22 & 53 & \(>100\) & \(>100\) & \(>100\) & \(>100\) & \(>100\) \\
+% \cmidrule(lr){2-12}
+%  & \multirow{3}{*}{7} & $A\mathcal{D}_r(\%)\uparrow$ & 93.12 & 95.34 & 92.31 & 45.73 & 89.24 & 88.15 & 83.54 & 85.10 & \underline{\textbf{94.67}} \\
+%  & & $A\mathcal{D}_f(\%)\downarrow$ & 85.87 & 0.00 & 31.02 & 1.68 & 13.34 & 1.32 & 0.00 & 0.00 & \textbf{0.00} \\
+%  & & $\ \ \ \ RT\ \ \ \ \ \uparrow$ & -- & \(>100\) & 14 & 29 & \(>100\) & \(>100\) & \(>100\) & \(>100\) & \(>100\) \\
+% \bottomrule
+% \end{tabular}
+% \caption{Results of $A\mathcal{D}_r$, $A\mathcal{D}_f$, and $RT$ across different $\#\mathcal{Y}_f$ values using AllCNN and ResNet18 predictive models on Fashion MNIST datasets. The upward arrow ($\uparrow$) indicates that higher values are better, while the downward arrow ($\downarrow$) indicates that lower values are better. Underlined Values denote results within 5\% of the original predictive model's performance, and Bolded Values indicate that our framework's results differ from the CRetrain by less than 5\%.}
+% \label{table_fashion_mnist}
+% \end{table*}
+
+\begin{table*}[t]
+\centering
+\small
+\setlength{\aboverulesep}{0pt}
+\setlength{\belowrulesep}{0pt}
+\setlength{\extrarowheight}{0.3pt} % 调整行高
+\resizebox{\textwidth}{!}{ % 调整表格宽度为页面宽度
+\begin{tabular}{c|cr|ccccccccc}
+\toprule
+\multirow{2.5}{*}{Models} & \multirow{2.5}{*}{$\#\mathcal{Y}_f$} & \multirow{2.5}{*}{Metrics} & \multicolumn{9}{c}{\textbf{Fashion MNIST}} \\
+\cmidrule(lr){4-12}
+ & & & Original & CRetrain & Finetune & NegGrad & RL & MI & GKT & UNSIR & \textbf{Ours} \\
+\midrule
+
+\multirow{12}{*}{\rotatebox{90}{\textbf{AllCNN}}}
+ & \multirow{3}{*}{1} & $A\mathcal{D}_r(\%)\uparrow$ & 90.12 & 92.36 & 90.72 & 46.58 & 85.12 & 86.13 & 81.23 & 82.50 & \underline{\textbf{88.74}} \\
+ & & $A\mathcal{D}_f(\%)\downarrow$ & 88.56 & 0.00 & 34.56 & 1.12 & 12.34 & 0.67 & 0.00 & 0.00 & \textbf{0.00} \\
+ & & $\ \ \ \ RT\ \ \ \ \ \uparrow$ & -- & \(>100\) & 27 & 45 & \(>100\) & \(>100\) & \(>100\) & \(>100\) & \(>100\) \\
+\cmidrule(lr){2-12}
+ & \multirow{3}{*}{2} & $A\mathcal{D}_r(\%)\uparrow$ & 89.47 & 93.12 & 90.14 & 50.17 & 84.47 & 85.13 & 77.54 & 78.90 & \underline{\textbf{88.65}} \\
+ & & $A\mathcal{D}_f(\%)\downarrow$ & 90.14 & 0.00 & 37.56 & 1.55 & 13.28 & 1.43 & 0.00 & 0.00 & \textbf{0.00} \\
+ & & $\ \ \ \ RT\ \ \ \ \ \uparrow$ & -- & \(>100\) & 16 & 76 & \(>100\) & \(>100\) & \(>100\) & \(>100\) & \(>100\) \\
+\cmidrule(lr){2-12}
+ & \multirow{3}{*}{4} & $A\mathcal{D}_r(\%)\uparrow$ & 88.75 & 93.20 & 88.96 & 40.27 & 83.75 & 84.21 & 74.32 & 75.90 & \underline{\textbf{90.45}} \\
+ & & $A\mathcal{D}_f(\%)\downarrow$ & 91.32 & 0.00 & 40.94 & 1.89 & 14.05 & 0.82 & 0.00 & 0.00 & \textbf{0.00} \\
+ & & $\ \ \ \ RT\ \ \ \ \ \uparrow$ & -- & \(>100\) & 21 & 33 & \(>100\) & \(>100\) & \(>100\) & \(>100\) & \(>100\) \\
+\cmidrule(lr){2-12}
+ & \multirow{3}{*}{7} & $A\mathcal{D}_r(\%)\uparrow$ & 92.14 & 95.41 & 92.41 & 50.34 & 87.34 & 88.65 & 83.12 & 84.65 & \underline{\textbf{93.12}} \\
+ & & $A\mathcal{D}_f(\%)\downarrow$ & 89.01 & 0.00 & 33.23 & 1.62 & 13.56 & 2.34 & 0.00 & 0.00 & \textbf{0.00} \\
+ & & $\ \ \ \ RT\ \ \ \ \ \uparrow$ & -- & \(>100\) & 23 & 48 & \(>100\) & \(>100\) & \(>100\) & \(>100\) & \(>100\) \\
+\midrule
+\multirow{12}{*}{\rotatebox{90}{\textbf{ResNet18}}}
+ & \multirow{3}{*}{1} & $A\mathcal{D}_r(\%)\uparrow$ & 91.23 & 93.41 & 91.76 & 54.82 & 86.23 & 87.14 & 82.67 & 83.10 & \underline{\textbf{90.34}} \\
+ & & $A\mathcal{D}_f(\%)\downarrow$ & 87.45 & 0.00 & 41.38 & 0.91 & 14.12 & 1.24 & 0.00 & 0.00 & \textbf{0.00} \\
+ & & $\ \ \ \ RT\ \ \ \ \ \uparrow$ & -- & \(>100\) & 18 & 72 & \(>100\) & \(>100\) & \(>100\) & \(>100\) & \(>100\) \\
+\cmidrule(lr){2-12}
+ & \multirow{3}{*}{2} & $A\mathcal{D}_r(\%)\uparrow$ & 89.87 & 94.85 & 89.05 & 40.98 & 85.12 & 86.13 & 75.54 & 77.32 & \underline{\textbf{90.23}} \\
+ & & $A\mathcal{D}_f(\%)\downarrow$ & 88.56 & 0.00 & 47.79 & 1.36 & 13.95 & 0.95 & 0.00 & 0.00 & \textbf{0.00} \\
+ & & $\ \ \ \ RT\ \ \ \ \ \uparrow$ & -- & \(>100\) & 27 & 66 & \(>100\) & \(>100\) & \(>100\) & \(>100\) & \(>100\) \\
+\cmidrule(lr){2-12}
+ & \multirow{3}{*}{4} & $A\mathcal{D}_r(\%)\uparrow$ & 90.54 & 92.76 & 90.79 & 30.34 & 86.12 & 85.23 & 80.54 & 81.30 & \underline{\textbf{91.45}} \\
+ & & $A\mathcal{D}_f(\%)\downarrow$ & 87.65 & 0.00 & 37.92 & 1.43 & 12.78 & 1.67 & 0.00 & 0.00 & \textbf{0.00} \\
+ & & $\ \ \ \ RT\ \ \ \ \ \uparrow$ & -- & \(>100\) & 22 & 53 & \(>100\) & \(>100\) & \(>100\) & \(>100\) & \(>100\) \\
+\cmidrule(lr){2-12}
+ & \multirow{3}{*}{7} & $A\mathcal{D}_r(\%)\uparrow$ & 93.12 & 95.34 & 92.31 & 45.73 & 89.24 & 88.15 & 83.54 & 85.10 & \underline{\textbf{94.67}} \\
+ & & $A\mathcal{D}_f(\%)\downarrow$ & 85.87 & 0.00 & 31.02 & 1.68 & 13.34 & 1.32 & 0.00 & 0.00 & \textbf{0.00} \\
+ & & $\ \ \ \ RT\ \ \ \ \ \uparrow$ & -- & \(>100\) & 14 & 29 & \(>100\) & \(>100\) & \(>100\) & \(>100\) & \(>100\) \\
+\bottomrule
+\end{tabular}
+}
+\caption{Results of $A\mathcal{D}_r$, $A\mathcal{D}_f$, and $RT$ across different $\#\mathcal{Y}_f$ values using AllCNN and ResNet18 predictive models on Fashion MNIST datasets. The upward arrow ($\uparrow$) indicates that higher values are better, while the downward arrow ($\downarrow$) indicates that lower values are better. Underlined Values denote results within 5\% of the original predictive model's performance, and Bolded Values indicate that our framework's results differ from the CRetrain by less than 5\%.}
+\label{table_fashion_mnist}
+\end{table*}
